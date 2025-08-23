@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Example</title>
+</head>
+<body>
+  <h2>Canvas Shapes</h2>
+  <canvas id="myCanvas" width="300" height="300" style="border:1px solid black;"></canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    // Draw Square
+    ctx.fillStyle = "blue";
+    ctx.fillRect(30, 30, 100, 100);
+
+    // Draw Circle
+    ctx.beginPath();
+    ctx.arc(220, 80, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.stroke();
+
+    // Draw Triangle
+    ctx.beginPath();
+    ctx.moveTo(150, 200);  // top point
+    ctx.lineTo(100, 270);  // bottom left
+    ctx.lineTo(200, 270);  // bottom right
+    ctx.closePath();
+    ctx.fillStyle = "green";
+    ctx.fill();
+    ctx.stroke();
+  </script>
+</body>
+</html>
