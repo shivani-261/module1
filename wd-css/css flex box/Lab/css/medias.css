@@ -1,0 +1,45 @@
+@media only screen and (max-width:1160px) {
+
+}
+
+@media only screen and (max-width:992px) {
+
+}
+@media only screen and (max-width:768px) {
+    /*Header start  */
+     .nav-ul {
+        display: none;
+    }
+    .header-content .h1{
+        width: 100%;
+    }
+    .header-content .header-btn {
+        width: 40%;
+        margin: 25px 20px;
+    }
+    /* Header end */
+    .menu-title .menu-p {
+        width: 80%;
+    }
+    .menu-card .row{
+        display: block;
+    }
+    .row .col {
+        width: 80%;
+        margin: 0% auto;
+    }
+    /* footer start */
+    #foot .row {
+        display: block;
+        width: 100%;
+    }
+    #foot .row .col{
+        width: 90%;
+    }
+    /* footer end */
+
+    }
+
+@media only screen and (max-width:576px) {
+
+}
