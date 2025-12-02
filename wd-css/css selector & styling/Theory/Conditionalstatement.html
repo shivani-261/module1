@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-------------------------------------------------------->
+
+    <!-- 1) if statement :
+    Syntax :
+    if(condition){
+    //Block of the code
+    } -->
+
+    <!-------------------------------------------------------->
+
+    <!-- 2) if else statement :
+    Synatax:
+    if(condition){
+    //True Part
+    }
+    else{
+    //False Part
+    } -->
+
+    <!-------------------------------------------------------->
+
+    <!-- 3) Ladder if-else statement :
+    Syntax :
+    if(condition){
+    //True Part
+    }
+    elseif(condition){
+    //truepart
+    }
+    elseif(condition){
+    //truepart
+    }
+    else{
+    //false part
+    } -->
+
+    <!-------------------------------------------------------->
+
+    <!-- 4) Ternary Operator
+    Syntax :
+    Variable = (Condation)?(True part):False -->
+
+    <!-------------------------------------------------------->
+
+    <!-- 5) switch (expression) {
+    case value1:
+    // code block to execute if expression === value1
+    break;
+
+    case value2:
+    // code block to execute if expression === value2
+    break;
+
+    case value3:
+    // code block to execute if expression === value3
+    break;
+
+    default:
+    // code block to execute if no cases match -->
+
+    <!-------------------------------------------------------->
+    <script>
+
+
+        //1) if statment
+        let x = 16;
+        if (x >= 18) {
+            console.log("You are an adult.");
+        }
+
+        //2) if else statement
+        let age = 16;
+        if (age >= 18) {
+            console.log("You can vote.");
+        } else {
+            console.log("You are too young to vote.");
+        }
+
+
+        //3) Ladder if-else statement
+        let marks = 75;
+        if (marks >= 90) {
+            console.log("Grade A");
+        } else if (marks >= 75) {
+            console.log("Grade B");
+        } else if (marks >= 60) {
+            console.log("Grade C");
+        } else {
+            console.log("Fail");
+        }
+
+
+        //4)Ternary Operator
+        let y = 20; 
+        let message = (y >= 18) ? "Adult" : "Minor";
+        console.log(message);
+
+
+
+        //4) Switch case
+        let day = "Monday";
+
+        switch (day) {
+            case "Monday":
+                console.log("Start of the week!");
+                break;
+            case "Tuesday":
+                console.log("Second day of the week!")    
+            case "Friday":
+                console.log("Weekend is near!");
+                break;
+            default:
+                console.log("Just another day.");
+        }
+    </script>
+</body>
+
+</html>
