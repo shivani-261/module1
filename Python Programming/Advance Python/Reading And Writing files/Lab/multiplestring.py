@@ -1,0 +1,6 @@
+file = open("practice.txt", "w")
+file.write("My name is Rina\n")
+file.write("I am learning python\n")
+file.write("File handling is easy\n")
+file.close()
+print("Lines written successfully")
