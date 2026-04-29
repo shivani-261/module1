@@ -1,0 +1,103 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+	</head>
+
+	<body>
+		<!-- Start Contact Form -->
+		<div class="untree_co-section">
+      <div class="container">
+
+        <div class="block">
+          <div class="row justify-content-center">
+
+
+            <div class="col-md-8 col-lg-8 pb-4">
+                {% if msg %}
+                    <b style="color: blue;">{{msg}}</b>
+                {% endif %}
+              <form method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    {% if user.user_type == "buyer" %}
+                  <label class="text-black" for="email">Select User Type</label>
+                  <select class="form-control" id="email" name="user_type">
+                    <option>---Select User Type---</option> 
+                    <option value="buyer" selected>Buyer</option>
+                    <option value="seller">Seller</option>   
+                </select>
+                 {% else %}
+                    <label class="text-black" for="email">Select User Type</label>
+                  <select class="form-control" id="email" name="user_type">
+                    <option>---Select User Type---</option> 
+                    <option value="buyer">Buyer</option>
+                    <option value="seller" selected>Seller</option>   
+                </select>
+                {% endif %}
+            </div>
+               
+                <div class="row">
+
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="text-black" for="fname">First name</label>
+                      <input type="text" class="form-control" id="fname"  name="fname" value="{{user.fname}}">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="text-black" for="lname">Last name</label>
+                      <input type="text" class="form-control" id="lname" name="lname" value="{{user.lname}}">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="text-black" for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email" value="{{user.email}}" readonly>
+                </div>
+                <div class="form-group">
+                  <label class="text-black" for="email">Mobile</label>
+                  <input type="text" class="form-control" id="email" name="mobile" value="{{user.mobile}}">
+                </div>
+                <div class="form-group mb-5">
+                  <label class="text-black" for="message">Address</label>
+                  <textarea name="address" class="form-control" id="message" cols="30" rows="5">{{user.address}}</textarea>
+                </div>
+                <div class="form-group">
+                  <img src="{{request.session.profile_picture}}" style="width: 100px;height: 100px;border-radius: 50%;">
+                </div>
+                <div class="form-group">
+                  <label class="text-black" for="email">Profile Picture</label>
+                  <input type="file" class="form-control" id="email" name="profile_picture">
+                </div>
+                
+                <button type="submit" class="btn btn-primary-hover-outline">Update Profile</button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- End Contact Form -->
+	</body>
+
+</html>
+{% endblock %}

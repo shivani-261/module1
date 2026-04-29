@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card border-0 shadow rounded-4 p-4 mx-auto" style="max-width:700px;">
+        <h2 class="text-success fw-bold">Add Doctor</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="name" class="form-control mb-3" placeholder="Doctor Name">
+            <input type="text" name="speciality" class="form-control mb-3" placeholder="Speciality">
+            <input type="text" name="experience" class="form-control mb-3" placeholder="Experience">
+            <input type="number" name="fees" class="form-control mb-3" placeholder="Fees">
+            <input type="text" name="availability" class="form-control mb-3" placeholder="Availability">
+            <input type="file" name="image" class="form-control mb-3">
+            <button class="btn btn-success rounded-pill px-4">Add Doctor</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

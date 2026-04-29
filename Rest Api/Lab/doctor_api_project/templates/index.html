@@ -1,0 +1,102 @@
+{% include 'header.html' %}
+
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <span class="hero-badge"><i class="bi bi-shield-check"></i> Django REST API Project</span>
+                <h1 class="hero-title">Doctor Finder REST API</h1>
+                <p class="hero-text">
+                    A clean and simple Django project for managing doctor records, user token authentication,
+                    and API based responses using Django REST Framework.
+                </p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="/api/doctors/" class="btn primary-btn">
+                        View Doctor API <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                    <a href="/api/register/" class="btn outline-btn">
+                        Register API
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="hero-card">
+                    <div class="pulse-circle"><i class="bi bi-hospital"></i></div>
+                    <h4>API Features</h4>
+                    <p>Doctor list, doctor detail, token login, register endpoint and weather API support.</p>
+                    <div class="status-box">
+                        <span>Project Status</span>
+                        <strong>Ready</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="section-heading text-center mb-5">
+            <span>Available Modules</span>
+            <h2>Project Overview</h2>
+            <p>This UI is redesigned only from frontend side. Your backend functionality is kept same.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon"><i class="bi bi-person-vcard"></i></div>
+                    <h5>Doctor API</h5>
+                    <p>View, add, update and delete doctor records using REST API endpoints.</p>
+                    <a href="/api/doctors/">Open API</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon"><i class="bi bi-key"></i></div>
+                    <h5>Token Auth</h5>
+                    <p>Register and login APIs generate tokens for protected API access.</p>
+                    <a href="/api/login/">Login API</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon"><i class="bi bi-cloud-sun"></i></div>
+                    <h5>Weather API</h5>
+                    <p>Check weather response by passing city name in query string.</p>
+                    <a href="/api/weather/?city=Surat">Try Weather</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card h-100">
+                    <div class="feature-icon"><i class="bi bi-speedometer2"></i></div>
+                    <h5>Admin Panel</h5>
+                    <p>Manage doctors and project records from Django admin panel.</p>
+                    <a href="/admin/">Open Admin</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="api-panel mt-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                    <h3>Useful API URLs</h3>
+                    <p>Use these endpoints for testing in browser, Postman, or Thunder Client.</p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="endpoint-list">
+                        <div><span>GET / POST</span><code>/api/doctors/</code></div>
+                        <div><span>GET / PUT / DELETE</span><code>/api/doctors/&lt;id&gt;/</code></div>
+                        <div><span>POST</span><code>/api/register/</code></div>
+                        <div><span>GET</span><code>/api/weather/?city=Surat</code></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'footer.html' %}

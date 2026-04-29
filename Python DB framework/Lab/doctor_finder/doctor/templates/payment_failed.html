@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <div class="card border-0 shadow rounded-4 p-5">
+        <h3 class="text-danger fw-bold">Payment Failed</h3>
+        <p>Payment verification failed.</p>
+        <a href="{% url 'doctors' %}" class="btn btn-success rounded-pill">Try Again</a>
+    </div>
+</div>
+{% endblock %}

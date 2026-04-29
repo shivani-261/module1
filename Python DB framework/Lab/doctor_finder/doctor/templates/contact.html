@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card border-0 shadow rounded-4 p-4 h-100">
+                <h2 class="text-success fw-bold">Contact Us</h2>
+                {% if msg %}<div class="alert alert-success">{{ msg }}</div>{% endif %}
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="name" class="form-control mb-3" placeholder="Name">
+                    <input type="email" name="email" class="form-control mb-3" placeholder="Email">
+                    <textarea name="message" class="form-control mb-3" placeholder="Message"></textarea>
+                    <button class="btn btn-success w-100 rounded-pill">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-0 shadow rounded-4 p-4 h-100">
+                <h4 class="text-success fw-bold">Our Location</h4>
+                <iframe src="https://www.google.com/maps?q=Ahmedabad&output=embed" width="100%" height="330" style="border:0;" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

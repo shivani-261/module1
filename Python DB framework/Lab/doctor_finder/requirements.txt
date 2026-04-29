@@ -1,0 +1,4 @@
+Django
+Pillow
+razorpay
+django-allauth[socialaccount]
